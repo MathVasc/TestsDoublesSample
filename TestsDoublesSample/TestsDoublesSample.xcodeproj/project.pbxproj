@@ -125,6 +125,7 @@
 		79B7867423354F0D007EEFDE /* TestsDoublesSample */ = {
 			isa = PBXGroup;
 			children = (
+				79B786A723355A2B007EEFDE /* Modules */,
 				79B786A3233558EE007EEFDE /* Utils */,
 				79B7867523354F0D007EEFDE /* AppDelegate.swift */,
 				79B7867C23354F0E007EEFDE /* Assets.xcassets */,
@@ -166,6 +167,21 @@
 				79B786A523355917007EEFDE /* ViewCodable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		79B786A723355A2B007EEFDE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				79B786A823355A53007EEFDE /* Formatter */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		79B786A823355A53007EEFDE /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 		94922E958006E4B58C8BCEA8 /* Frameworks */ = {
