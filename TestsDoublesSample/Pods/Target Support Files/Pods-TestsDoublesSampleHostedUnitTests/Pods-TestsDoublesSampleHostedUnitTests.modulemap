@@ -1,0 +1,6 @@
+framework module Pods_TestsDoublesSampleHostedUnitTests {
+  umbrella header "Pods-TestsDoublesSampleHostedUnitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
