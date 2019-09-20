@@ -22,6 +22,11 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+## Mac OSX
+.DS_Store
+.vscode/
+.idea/
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
