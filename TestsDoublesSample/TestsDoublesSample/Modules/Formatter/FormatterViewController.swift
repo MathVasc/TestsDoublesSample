@@ -16,6 +16,7 @@ public class FormatterViewController: UIViewController {
     init(formatter: Formatter) {
         self.formatter = formatter
         super.init(nibName: nil, bundle: nil)
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
     }
 
     @available(*, unavailable)

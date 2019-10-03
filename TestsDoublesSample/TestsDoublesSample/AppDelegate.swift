@@ -16,9 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let controller = FormatterViewController(formatter: NumberFormatter())
 
-        window.rootViewController = controller
+        let navigationController = UINavigationController(rootViewController: UIViewController())
+        let formatterController = FormatterViewController(formatter: NumberFormatter())
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [navigationController, formatterController]
+        window.rootViewController = tabBarController
         window.backgroundColor = .white
         self.window = window
         window.makeKeyAndVisible()
