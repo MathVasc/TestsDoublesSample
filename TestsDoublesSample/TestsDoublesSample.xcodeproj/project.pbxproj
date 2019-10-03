@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		077C30FDA135F46B0F881072 /* Pods_TestsDoublesSampleUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED71E6F0A3FE198715B3C9 /* Pods_TestsDoublesSampleUnitTests.framework */; };
+		79728191233C043F008FC31C /* FormatterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728190233C043F008FC31C /* FormatterViewDelegate.swift */; };
+		79728193233C08AF008FC31C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728192233C08AF008FC31C /* Formatter.swift */; };
+		79728198233C0AF1008FC31C /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728197233C0AF1008FC31C /* NumberFormatter.swift */; };
 		79B7867623354F0D007EEFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B7867523354F0D007EEFDE /* AppDelegate.swift */; };
 		79B7867D23354F0E007EEFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B7867C23354F0E007EEFDE /* Assets.xcassets */; };
 		79B7868023354F0E007EEFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B7867E23354F0E007EEFDE /* LaunchScreen.storyboard */; };
@@ -44,6 +47,9 @@
 		3AED71E6F0A3FE198715B3C9 /* Pods_TestsDoublesSampleUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestsDoublesSampleUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		502C228ED3D78D14F791A717 /* Pods-TestsDoublesSampleUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsDoublesSampleUnitTests.release.xcconfig"; path = "Target Support Files/Pods-TestsDoublesSampleUnitTests/Pods-TestsDoublesSampleUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		62B72E9492672622FD3CAC05 /* Pods-TestsDoublesSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsDoublesSample.debug.xcconfig"; path = "Target Support Files/Pods-TestsDoublesSample/Pods-TestsDoublesSample.debug.xcconfig"; sourceTree = "<group>"; };
+		79728190233C043F008FC31C /* FormatterViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterViewDelegate.swift; sourceTree = "<group>"; };
+		79728192233C08AF008FC31C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		79728197233C0AF1008FC31C /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		79B7867223354F0D007EEFDE /* TestsDoublesSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsDoublesSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B7867523354F0D007EEFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B7867C23354F0E007EEFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +108,14 @@
 				502C228ED3D78D14F791A717 /* Pods-TestsDoublesSampleUnitTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		79728194233C09BE008FC31C /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				79728197233C0AF1008FC31C /* NumberFormatter.swift */,
+			);
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		79B7866923354F0D007EEFDE = {
@@ -169,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				79B786A523355917007EEFDE /* ViewCodable.swift */,
+				79728192233C08AF008FC31C /* Formatter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -184,8 +199,10 @@
 		79B786A823355A53007EEFDE /* Formatter */ = {
 			isa = PBXGroup;
 			children = (
+				79728194233C09BE008FC31C /* Formatters */,
 				79B786AB23355AFE007EEFDE /* FormatterView.swift */,
 				79B786A923355AF0007EEFDE /* FormatterViewController.swift */,
+				79728190233C043F008FC31C /* FormatterViewDelegate.swift */,
 			);
 			path = Formatter;
 			sourceTree = "<group>";
@@ -455,9 +472,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79728193233C08AF008FC31C /* Formatter.swift in Sources */,
 				79B7867623354F0D007EEFDE /* AppDelegate.swift in Sources */,
 				79B786AC23355AFE007EEFDE /* FormatterView.swift in Sources */,
+				79728191233C043F008FC31C /* FormatterViewDelegate.swift in Sources */,
 				79B786A623355917007EEFDE /* ViewCodable.swift in Sources */,
+				79728198233C0AF1008FC31C /* NumberFormatter.swift in Sources */,
 				79B786AA23355AF0007EEFDE /* FormatterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
