@@ -12,11 +12,13 @@ public class FormatterView: UIView, ViewCodable {
 
     let inputTextField: UITextField
     let formatterButton: UIButton
+    let inputTextFieldLine: CALayer
     weak var delegate: FormatterViewDelegate?
 
     override init(frame: CGRect) {
         inputTextField = UITextField()
         formatterButton = UIButton()
+        inputTextFieldLine = CALayer()
         super.init(frame: frame)
         setupView()
     }
@@ -29,6 +31,14 @@ public class FormatterView: UIView, ViewCodable {
     @objc func format() {
         if let text = inputTextField.text {
             inputTextField.text = delegate?.didFormat(text: text)
+        }
+    }
+
+    func updateTextFieldState(state: Bool) {
+        if state {
+            inputTextFieldLine.backgroundColor = UIColor.blue.cgColor
+        } else {
+            inputTextFieldLine.backgroundColor = UIColor.red.cgColor
         }
     }
 
@@ -59,11 +69,10 @@ public class FormatterView: UIView, ViewCodable {
 
     func render() {
         inputTextField.font = UIFont.systemFont(ofSize: 40)
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: 39, width: self.frame.width-32, height: 1.0)
-        bottomLine.backgroundColor = UIColor.blue.cgColor
+        inputTextFieldLine.frame = CGRect(x: 0.0, y: 39, width: self.frame.width-32, height: 1.0)
+        inputTextFieldLine.backgroundColor = UIColor.blue.cgColor
         inputTextField.borderStyle = .none
-        inputTextField.layer.addSublayer(bottomLine)
+        inputTextField.layer.addSublayer(inputTextFieldLine)
         inputTextField.keyboardType = .numberPad
         inputTextField.keyboardAppearance = .dark
         formatterButton.setTitle("Formatar", for: .normal)

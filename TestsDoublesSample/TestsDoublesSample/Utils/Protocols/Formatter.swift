@@ -10,4 +10,5 @@ import Foundation
 protocol Formatter {
     func canFormat(text: String) -> Bool
     func format(text: String) -> String
+    func removeFormat(text: String) -> String
 }

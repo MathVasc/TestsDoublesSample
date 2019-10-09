@@ -27,24 +27,20 @@ public class FormatterViewController: UIViewController {
     override public func loadView() {
         theView = FormatterView(frame: UIScreen.main.bounds)
         theView.delegate = self
-        theView.inputTextField.delegate = self
         view = theView
     }
 
 }
 
-extension FormatterViewController: UITextFieldDelegate {
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = textField.text, !formatter.canFormat(text: text), string != "" {
-            return false
-        }
-        return true
-    }
-}
-
 extension FormatterViewController: FormatterViewDelegate {
+
     func didFormat(text: String) -> String {
-        return formatter.format(text: text)
+        if formatter.canFormat(text: text) {
+            theView.updateTextFieldState(state: true)
+            return formatter.format(text: text)
+        }
+        theView.updateTextFieldState(state: false)
+        return formatter.removeFormat(text: text)
     }
 
 }

@@ -8,8 +8,10 @@
 
 import Foundation
 class NumberFormatter: Formatter {
+
     func canFormat(text: String) -> Bool {
-        if text.replacingOccurrences(of: "-", with: "").count >= 9 {
+        let cleanText = removeFormat(text: text)
+        if cleanText.count >= 10 || cleanText.count <= 7 {
             return false
         }
 
@@ -17,18 +19,23 @@ class NumberFormatter: Formatter {
     }
 
     func format(text: String) -> String {
-        let textWithoutFormmat = text.replacingOccurrences(of: "-", with: "")
-        if textWithoutFormmat.count < 8 {
-            return textWithoutFormmat
-        }
-        var numberFormatted = String()
-        for (i, character) in textWithoutFormmat.enumerated() {
-            numberFormatted.append(character)
-            if i == 3 && textWithoutFormmat.count == 8 || i == 4 && textWithoutFormmat.count == 9{
-                numberFormatted.append("-")
+        let textWithoutFormmat = removeFormat(text: text)
+        if canFormat(text: text) {
+            var numberFormatted = String()
+            for (i, character) in textWithoutFormmat.enumerated() {
+                numberFormatted.append(character)
+                if i == 3 && textWithoutFormmat.count == 8 || i == 4 && textWithoutFormmat.count == 9 {
+                    numberFormatted.append("-")
+                }
             }
+            return numberFormatted
         }
 
-        return numberFormatted
+        return textWithoutFormmat
     }
+
+    func removeFormat(text: String) -> String {
+        return text.replacingOccurrences(of: "-", with: "")
+    }
+
 }
