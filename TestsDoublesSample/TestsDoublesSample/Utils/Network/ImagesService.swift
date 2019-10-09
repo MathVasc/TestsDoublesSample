@@ -10,7 +10,7 @@ import Foundation
 
 typealias ImagesResult = Result<[Photo], NetworkError>
 
-class ImageServices {
+class ImagesService {
 
     let client: APIClient
     let url: URL?
@@ -21,7 +21,7 @@ class ImageServices {
     }
 
     func fetchImages(completion: @escaping (ImagesResult) -> Void) {
-        guard let url = self.url else {
+        guard let url = url else {
             completion(.failure(NetworkError.invalidUrl))
             return
         }

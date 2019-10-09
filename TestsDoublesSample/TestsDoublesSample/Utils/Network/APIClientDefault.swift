@@ -12,7 +12,7 @@ class APIClientDefault: APIClient {
 
     let session: URLSession
 
-    init(session: URLSession = URLSession.shared) {
+    init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
 

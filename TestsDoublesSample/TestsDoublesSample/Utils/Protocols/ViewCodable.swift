@@ -16,6 +16,9 @@ protocol ViewCodable {
 }
 
 extension ViewCodable {
+
+    func configure() { }
+
     func setupView() {
         configure()
         buildHierarchy()

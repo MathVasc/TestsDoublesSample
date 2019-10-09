@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.main.bounds)
 
-        let navigationController = UINavigationController(rootViewController: UIViewController())
+        let imageViewController = ImagesViewController(service: ImagesService(client: APIClientDefault()))
+        let navigationController = UINavigationController(rootViewController: imageViewController)
         let formatterController = FormatterViewController(formatter: NumberFormatter())
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [navigationController, formatterController]

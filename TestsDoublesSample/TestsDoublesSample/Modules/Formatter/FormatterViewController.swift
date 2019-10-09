@@ -28,7 +28,7 @@ public class FormatterViewController: UIViewController {
         theView = FormatterView(frame: UIScreen.main.bounds)
         theView.delegate = self
         theView.inputTextField.delegate = self
-        self.view = theView
+        view = theView
     }
 
 }
