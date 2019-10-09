@@ -30,6 +30,14 @@ public class FormatterViewController: UIViewController {
         view = theView
     }
 
+    override public func viewDidLoad() {
+        callAnalytics()
+    }
+
+    func callAnalytics() {
+        print("ANALYTICS - FORMATTER VIEW CONTROLLER - APPEAR")
+    }
+
 }
 
 extension FormatterViewController: FormatterViewDelegate {
