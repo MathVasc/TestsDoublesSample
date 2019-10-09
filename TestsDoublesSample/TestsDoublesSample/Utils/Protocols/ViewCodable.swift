@@ -19,6 +19,8 @@ extension ViewCodable {
 
     func configure() { }
 
+    func render() { }
+
     func setupView() {
         configure()
         buildHierarchy()

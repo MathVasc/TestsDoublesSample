@@ -15,12 +15,17 @@ class ImagesView: UIView, ViewCodable {
     override init(frame: CGRect) {
         tableView = UITableView(frame: .zero, style: .plain)
         super.init(frame: frame)
+        registerCell()
         setupView()
     }
 
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func registerCell() {
+        tableView.register(ImagesViewTableViewCell.self, forCellReuseIdentifier: "ImagesViewTableViewCell")
     }
 
     func buildHierarchy() {
