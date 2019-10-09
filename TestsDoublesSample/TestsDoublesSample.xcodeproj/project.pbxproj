@@ -172,6 +172,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		796F62CC234E8A95005AEA86 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		796F62CD234E8AA1005AEA86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		796F62CE234E8AAB005AEA86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		796F62CF234E8AB0005AEA86 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		79728194233C09BE008FC31C /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +247,8 @@
 		79B7868C233552D7007EEFDE /* TestsDoublesSampleUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				796F62CC234E8A95005AEA86 /* Modules */,
+				796F62CD234E8AA1005AEA86 /* Utils */,
 				79B7868D233552D7007EEFDE /* TestsDoublesSampleUnitTests.swift */,
 				79B7868F233552D7007EEFDE /* Info.plist */,
 			);
@@ -228,6 +258,8 @@
 		79B7869A233552ED007EEFDE /* TestsDoublesSampleHostedUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				796F62CF234E8AB0005AEA86 /* Modules */,
+				796F62CE234E8AAB005AEA86 /* Utils */,
 				79B7869B233552ED007EEFDE /* TestsDoublesSampleHostedUnitTests.swift */,
 				79B7869D233552ED007EEFDE /* Info.plist */,
 			);
