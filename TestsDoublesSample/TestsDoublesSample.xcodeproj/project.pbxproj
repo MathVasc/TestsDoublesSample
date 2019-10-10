@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		077C30FDA135F46B0F881072 /* Pods_TestsDoublesSampleUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AED71E6F0A3FE198715B3C9 /* Pods_TestsDoublesSampleUnitTests.framework */; };
+		792E993B234E95F900D8FDE0 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C8523465A6E0056D350 /* APIClientDefault.swift */; };
+		792E993C234E95FC00D8FDE0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C7F234656AA0056D350 /* APIClient.swift */; };
+		792E993D234E965300D8FDE0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C82234659210056D350 /* NetworkError.swift */; };
 		795E7C80234656AA0056D350 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C7F234656AA0056D350 /* APIClient.swift */; };
 		795E7C83234659210056D350 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C82234659210056D350 /* NetworkError.swift */; };
 		795E7C8623465A6E0056D350 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C8523465A6E0056D350 /* APIClientDefault.swift */; };
@@ -19,6 +22,8 @@
 		796F62B6234B85A0005AEA86 /* ImagesViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F62B5234B85A0005AEA86 /* ImagesViewTableViewCell.swift */; };
 		796F62C9234E653F005AEA86 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F62C8234E653F005AEA86 /* ImageViewController.swift */; };
 		796F62CB234E65B0005AEA86 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F62CA234E65B0005AEA86 /* ImageView.swift */; };
+		796F62D9234E8D66005AEA86 /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F62D8234E8D66005AEA86 /* URLSessionStub.swift */; };
+		796F62DB234E8F87005AEA86 /* APIClientDefaultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F62DA234E8F87005AEA86 /* APIClientDefaultTest.swift */; };
 		79728191233C043F008FC31C /* FormatterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728190233C043F008FC31C /* FormatterViewDelegate.swift */; };
 		79728193233C08AF008FC31C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728192233C08AF008FC31C /* Formatter.swift */; };
 		79728198233C0AF1008FC31C /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728197233C0AF1008FC31C /* NumberFormatter.swift */; };
@@ -69,6 +74,8 @@
 		796F62B5234B85A0005AEA86 /* ImagesViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewTableViewCell.swift; sourceTree = "<group>"; };
 		796F62C8234E653F005AEA86 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		796F62CA234E65B0005AEA86 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		796F62D8234E8D66005AEA86 /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
+		796F62DA234E8F87005AEA86 /* APIClientDefaultTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientDefaultTest.swift; sourceTree = "<group>"; };
 		79728190233C043F008FC31C /* FormatterViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterViewDelegate.swift; sourceTree = "<group>"; };
 		79728192233C08AF008FC31C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		79728197233C0AF1008FC31C /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
@@ -182,6 +189,7 @@
 		796F62CD234E8AA1005AEA86 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				796F62D0234E8B4C005AEA86 /* Network */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -198,6 +206,15 @@
 			children = (
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		796F62D0234E8B4C005AEA86 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				796F62D8234E8D66005AEA86 /* URLSessionStub.swift */,
+				796F62DA234E8F87005AEA86 /* APIClientDefaultTest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		79728194233C09BE008FC31C /* Formatters */ = {
@@ -594,7 +611,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796F62D9234E8D66005AEA86 /* URLSessionStub.swift in Sources */,
+				796F62DB234E8F87005AEA86 /* APIClientDefaultTest.swift in Sources */,
 				79B7868E233552D7007EEFDE /* TestsDoublesSampleUnitTests.swift in Sources */,
+				792E993D234E965300D8FDE0 /* NetworkError.swift in Sources */,
+				792E993C234E95FC00D8FDE0 /* APIClient.swift in Sources */,
+				792E993B234E95F900D8FDE0 /* APIClientDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
