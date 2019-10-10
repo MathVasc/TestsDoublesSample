@@ -27,6 +27,49 @@ class FormatterViewControllerTest: QuickSpec {
                     expect(sut.isAnalyticsCalled).to(beTrue())
                 }
             }
+
+            context("when initialized with a formatter mock") {
+
+                var formatterCollaborator: NumberFormatterMock!
+
+                beforeEach {
+                    formatterCollaborator = NumberFormatterMock()
+                    sut = FormatterViewControllerSpy(formatter: formatterCollaborator)
+                    sut.beginAppearanceTransition(true, animated: false)
+                    sut.endAppearanceTransition()
+                }
+
+                context("and delegate call to formatt with a valid number") {
+
+                    var result: Bool!
+
+                    beforeEach {
+                        result = false
+                        _ = sut.didFormat(text: "12345678")
+                        result = formatterCollaborator.verify(methods: .canFormat, .removeFormat, .format, .removeFormat, .canFormat, .removeFormat)
+                    }
+
+                    it("should validate and format number") {
+                        expect(result).to(beTrue())
+                    }
+                }
+
+                context("and delegate call to formatt with a not valid number") {
+
+                    var result: Bool!
+
+                    beforeEach {
+                        result = false
+                        _ = sut.didFormat(text: "1234")
+                        result = formatterCollaborator.verify(methods: .canFormat, .removeFormat, .removeFormat)
+                    }
+
+                    it("should validate and format number") {
+                        expect(result).to(beTrue())
+                    }
+                }
+
+            }
         }
     }
 
