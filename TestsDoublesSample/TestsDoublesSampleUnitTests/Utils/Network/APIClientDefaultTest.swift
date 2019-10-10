@@ -8,7 +8,6 @@
 
 import Quick
 import Nimble
-@testable import TestsDoublesSample
 
 class APIClientDefaultTest: QuickSpec {
 

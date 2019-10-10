@@ -11,6 +11,14 @@
 		792E993B234E95F900D8FDE0 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C8523465A6E0056D350 /* APIClientDefault.swift */; };
 		792E993C234E95FC00D8FDE0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C7F234656AA0056D350 /* APIClient.swift */; };
 		792E993D234E965300D8FDE0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C82234659210056D350 /* NetworkError.swift */; };
+		792E9941234EC80A00D8FDE0 /* FormatterViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E9940234EC80A00D8FDE0 /* FormatterViewControllerTest.swift */; };
+		792E9942234EC8DE00D8FDE0 /* FormatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B786A923355AF0007EEFDE /* FormatterViewController.swift */; };
+		792E9944234EC90A00D8FDE0 /* FormatterViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E9943234EC90A00D8FDE0 /* FormatterViewControllerSpy.swift */; };
+		792E9945234EC9E700D8FDE0 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728197233C0AF1008FC31C /* NumberFormatter.swift */; };
+		792E9946234ECA5800D8FDE0 /* FormatterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728190233C043F008FC31C /* FormatterViewDelegate.swift */; };
+		792E9947234ECA5F00D8FDE0 /* FormatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B786AB23355AFE007EEFDE /* FormatterView.swift */; };
+		792E9948234ECA6900D8FDE0 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B786A523355917007EEFDE /* ViewCodable.swift */; };
+		792E9949234ECA7B00D8FDE0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728192233C08AF008FC31C /* Formatter.swift */; };
 		795E7C80234656AA0056D350 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C7F234656AA0056D350 /* APIClient.swift */; };
 		795E7C83234659210056D350 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C82234659210056D350 /* NetworkError.swift */; };
 		795E7C8623465A6E0056D350 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C8523465A6E0056D350 /* APIClientDefault.swift */; };
@@ -63,6 +71,8 @@
 		3AED71E6F0A3FE198715B3C9 /* Pods_TestsDoublesSampleUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestsDoublesSampleUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		502C228ED3D78D14F791A717 /* Pods-TestsDoublesSampleUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsDoublesSampleUnitTests.release.xcconfig"; path = "Target Support Files/Pods-TestsDoublesSampleUnitTests/Pods-TestsDoublesSampleUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		62B72E9492672622FD3CAC05 /* Pods-TestsDoublesSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsDoublesSample.debug.xcconfig"; path = "Target Support Files/Pods-TestsDoublesSample/Pods-TestsDoublesSample.debug.xcconfig"; sourceTree = "<group>"; };
+		792E9940234EC80A00D8FDE0 /* FormatterViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterViewControllerTest.swift; sourceTree = "<group>"; };
+		792E9943234EC90A00D8FDE0 /* FormatterViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterViewControllerSpy.swift; sourceTree = "<group>"; };
 		795E7C7F234656AA0056D350 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		795E7C82234659210056D350 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		795E7C8523465A6E0056D350 /* APIClientDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientDefault.swift; sourceTree = "<group>"; };
@@ -139,6 +149,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		792E993E234EC70100D8FDE0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				792E993F234EC7B100D8FDE0 /* Formatter */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		792E993F234EC7B100D8FDE0 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				792E9940234EC80A00D8FDE0 /* FormatterViewControllerTest.swift */,
+				792E9943234EC90A00D8FDE0 /* FormatterViewControllerSpy.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
 		795E7C8423465A4C0056D350 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +216,7 @@
 		796F62CD234E8AA1005AEA86 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				792E993E234EC70100D8FDE0 /* Modules */,
 				796F62D0234E8B4C005AEA86 /* Network */,
 			);
 			path = Utils;
@@ -611,10 +639,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792E9941234EC80A00D8FDE0 /* FormatterViewControllerTest.swift in Sources */,
+				792E9945234EC9E700D8FDE0 /* NumberFormatter.swift in Sources */,
 				796F62D9234E8D66005AEA86 /* URLSessionStub.swift in Sources */,
+				792E9944234EC90A00D8FDE0 /* FormatterViewControllerSpy.swift in Sources */,
 				796F62DB234E8F87005AEA86 /* APIClientDefaultTest.swift in Sources */,
+				792E9948234ECA6900D8FDE0 /* ViewCodable.swift in Sources */,
+				792E9942234EC8DE00D8FDE0 /* FormatterViewController.swift in Sources */,
 				79B7868E233552D7007EEFDE /* TestsDoublesSampleUnitTests.swift in Sources */,
 				792E993D234E965300D8FDE0 /* NetworkError.swift in Sources */,
+				792E9946234ECA5800D8FDE0 /* FormatterViewDelegate.swift in Sources */,
+				792E9949234ECA7B00D8FDE0 /* Formatter.swift in Sources */,
+				792E9947234ECA5F00D8FDE0 /* FormatterView.swift in Sources */,
 				792E993C234E95FC00D8FDE0 /* APIClient.swift in Sources */,
 				792E993B234E95F900D8FDE0 /* APIClientDefault.swift in Sources */,
 			);
