@@ -153,14 +153,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		792E993E234EC70100D8FDE0 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				792E993F234EC7B100D8FDE0 /* Formatter */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		792E993F234EC7B100D8FDE0 /* Formatter */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +215,7 @@
 		796F62CC234E8A95005AEA86 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				792E993F234EC7B100D8FDE0 /* Formatter */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -230,7 +223,6 @@
 		796F62CD234E8AA1005AEA86 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				792E993E234EC70100D8FDE0 /* Modules */,
 				796F62D0234E8B4C005AEA86 /* Network */,
 			);
 			path = Utils;
