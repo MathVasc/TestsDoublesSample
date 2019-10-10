@@ -21,6 +21,11 @@
 		792E9949234ECA7B00D8FDE0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79728192233C08AF008FC31C /* Formatter.swift */; };
 		792E994C234ECED400D8FDE0 /* NumberFormatterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E994B234ECED400D8FDE0 /* NumberFormatterMock.swift */; };
 		792E994E234ED2E800D8FDE0 /* NumberFormatterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E994D234ED2E800D8FDE0 /* NumberFormatterTest.swift */; };
+		792E9950234F784F00D8FDE0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E994F234F784F00D8FDE0 /* main.swift */; };
+		792E9952234F78F500D8FDE0 /* AppDelegateFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E9951234F78F500D8FDE0 /* AppDelegateFake.swift */; };
+		792E9960234F872900D8FDE0 /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F62D8234E8D66005AEA86 /* URLSessionStub.swift */; };
+		792E9962234F94A000D8FDE0 /* SingletonDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E9961234F94A000D8FDE0 /* SingletonDummy.swift */; };
+		792E9966234F954800D8FDE0 /* SingletonDummyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E9965234F954800D8FDE0 /* SingletonDummyTest.swift */; };
 		795E7C80234656AA0056D350 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C7F234656AA0056D350 /* APIClient.swift */; };
 		795E7C83234659210056D350 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C82234659210056D350 /* NetworkError.swift */; };
 		795E7C8623465A6E0056D350 /* APIClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E7C8523465A6E0056D350 /* APIClientDefault.swift */; };
@@ -77,6 +82,10 @@
 		792E9943234EC90A00D8FDE0 /* FormatterViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterViewControllerSpy.swift; sourceTree = "<group>"; };
 		792E994B234ECED400D8FDE0 /* NumberFormatterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterMock.swift; sourceTree = "<group>"; };
 		792E994D234ED2E800D8FDE0 /* NumberFormatterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterTest.swift; sourceTree = "<group>"; };
+		792E994F234F784F00D8FDE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		792E9951234F78F500D8FDE0 /* AppDelegateFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFake.swift; sourceTree = "<group>"; };
+		792E9961234F94A000D8FDE0 /* SingletonDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonDummy.swift; sourceTree = "<group>"; };
+		792E9965234F954800D8FDE0 /* SingletonDummyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonDummyTest.swift; sourceTree = "<group>"; };
 		795E7C7F234656AA0056D350 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		795E7C82234659210056D350 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		795E7C8523465A6E0056D350 /* APIClientDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientDefault.swift; sourceTree = "<group>"; };
@@ -231,6 +240,8 @@
 		796F62CE234E8AAB005AEA86 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				792E9961234F94A000D8FDE0 /* SingletonDummy.swift */,
+				792E9965234F954800D8FDE0 /* SingletonDummyTest.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -288,6 +299,8 @@
 				79B786A723355A2B007EEFDE /* Modules */,
 				79B786A3233558EE007EEFDE /* Utils */,
 				79B7867523354F0D007EEFDE /* AppDelegate.swift */,
+				792E9951234F78F500D8FDE0 /* AppDelegateFake.swift */,
+				792E994F234F784F00D8FDE0 /* main.swift */,
 				79B7867C23354F0E007EEFDE /* Assets.xcassets */,
 				79B7867E23354F0E007EEFDE /* LaunchScreen.storyboard */,
 				79B7868123354F0E007EEFDE /* Info.plist */,
@@ -623,6 +636,7 @@
 				79728193233C08AF008FC31C /* Formatter.swift in Sources */,
 				79B7867623354F0D007EEFDE /* AppDelegate.swift in Sources */,
 				79B786AC23355AFE007EEFDE /* FormatterView.swift in Sources */,
+				792E9952234F78F500D8FDE0 /* AppDelegateFake.swift in Sources */,
 				796F62C9234E653F005AEA86 /* ImageViewController.swift in Sources */,
 				795E7C8823465D560056D350 /* URLBuilder.swift in Sources */,
 				795E7C8623465A6E0056D350 /* APIClientDefault.swift in Sources */,
@@ -635,6 +649,7 @@
 				795E7C83234659210056D350 /* NetworkError.swift in Sources */,
 				795E7C8A2346630B0056D350 /* ImagesService.swift in Sources */,
 				796F62B6234B85A0005AEA86 /* ImagesViewTableViewCell.swift in Sources */,
+				792E9950234F784F00D8FDE0 /* main.swift in Sources */,
 				79728198233C0AF1008FC31C /* NumberFormatter.swift in Sources */,
 				79B786AA23355AF0007EEFDE /* FormatterViewController.swift in Sources */,
 				795E7C942346A1D90056D350 /* ImagesView.swift in Sources */,
@@ -668,6 +683,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792E9960234F872900D8FDE0 /* URLSessionStub.swift in Sources */,
+				792E9962234F94A000D8FDE0 /* SingletonDummy.swift in Sources */,
+				792E9966234F954800D8FDE0 /* SingletonDummyTest.swift in Sources */,
 				79B7869C233552ED007EEFDE /* TestsDoublesSampleHostedUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

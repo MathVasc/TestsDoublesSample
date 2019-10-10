@@ -34,12 +34,7 @@ class NumberFormatterMock: NumberFormatter {
             return false
         }
 
-        var isValid = true
-        for i in Range(0...methods.count-1) {
-            if methods[i] != methodsCalled[i] {
-                isValid = false
-            }
-        }
+        let isValid = methods.elementsEqual(methodsCalled)
         methodsCalled = []
         return isValid
     }
