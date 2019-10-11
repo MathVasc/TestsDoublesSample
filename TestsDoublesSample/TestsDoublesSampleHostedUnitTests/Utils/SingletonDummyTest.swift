@@ -14,7 +14,10 @@ class SingletonDummyTest: QuickSpec {
     override func spec() {
         describe("SingletonDummy") {
 
+            let originalValue: Bool = SingletonDummy.shared.bool
+
             context("when request the bool value") {
+                
                 context("when request the bool value after change to true") {
                     beforeEach {
                         SingletonDummy.shared.bool = true
@@ -27,6 +30,10 @@ class SingletonDummyTest: QuickSpec {
                 it("should return false as default") {
                     expect(SingletonDummy.shared.bool).to(beFalse())
                 }
+            }
+
+            afterEach {
+                SingletonDummy.shared.bool = originalValue
             }
 
         }
